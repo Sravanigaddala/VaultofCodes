@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VaultofCodes - Certificate Verifier</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="brand-header">
+    <div class="brand-container">
+      <img src="download.png" alt="VaultofCodes Logo" class="brand-logo" />
+      <h1 class="brand-title">VaultofCodes</h1>
+    </div>
+  </header>
+
+  <!-- Theme toggle -->
+  <div class="theme-toggle">
+    <button onclick="toggleTheme()">🌗 Toggle Theme</button>
+  </div>
+
+  <!-- Form Area -->
+  <main>
+    <div class="form-area">
+      <input type="text" id="identifier" placeholder="Enter Email or ID" oninput="showSuggestions(this.value)">
+      <div id="suggestions" class="suggestions-box"></div>
+      <button onclick="verifyStudent()">Verify</button>
+      <button onclick="resetForm()">Reset</button>
+    </div>
+
+    <!-- Result Output -->
+    <div id="result"></div>
+
+    <!-- Spinner -->
+    <div class="spinner" style="display: none;">Loading...</div>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
