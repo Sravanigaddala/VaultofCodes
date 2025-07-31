@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Habit Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Habit Tracker</h1>
+      <p>Build better habits, one day at a time</p>
+      <div class="summary">
+        <div class="card">
+          <p class="label">Today's Progress</p>
+          <h2 id="today-progress">0/0</h2>
+          <div class="bar"><div class="bar-fill" id="today-bar"></div></div>
+        </div>
+        <div class="card">
+          <p class="label">Weekly Average</p>
+          <h2 id="weekly-progress">0%</h2>
+          <div class="bar"><div class="bar-fill" id="weekly-bar"></div></div>
+        </div>
+        <div class="card">
+          <p class="label">Total Streaks</p>
+          <h2 id="streak-count">0</h2>
+          <div class="bar"><div class="bar-fill" id="streak-bar"></div></div>
+        </div>
+        <div class="card">
+          <p class="label">Active Habits</p>
+          <h2 id="active-habits">0</h2>
+          <div class="bar"><div class="bar-fill" id="active-bar"></div></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="habits">
+      <h2>Your Habits</h2>
+      <p>Track your daily progress and build consistency</p>
+      <div id="habit-list"></div>
+      <input type="text" id="habit-input" placeholder="Enter a new habit" />
+
+      <button id="add-btn">+ Add New Habit</button>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="habit-modal">
+      <div class="modal-content">
+        <span class="close" id="close-modal">&times;</span>
+        <h3>Create New Habit</h3>
+        <input type="text" id="habit-name" placeholder="e.g., Drink 8 glasses of water" />
+        <textarea id="habit-desc" placeholder="Add a description..."></textarea>
+        <div class="color-options">
+          <span class="color purple active" data-color="purple"></span>
+          <span class="color blue" data-color="blue"></span>
+          <span class="color green" data-color="green"></span>
+          <span class="color orange" data-color="orange"></span>
+          <span class="color pink" data-color="pink"></span>
+          <span class="color violet" data-color="violet"></span>
+        </div>
+        <div class="modal-actions">
+          <button id="cancel">Cancel</button>
+          <button id="create">Create Habit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="Script.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #fefaff;
+  color: #2c2c2c;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #522e5b;
+}
+
+header p {
+  margin-bottom: 20px;
+  color: #7a597e;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.label {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.bar {
+  height: 6px;
+  background: #f0e4f5;
+  border-radius: 5px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  width: 0%;
+  background: #9c27b0;
+  transition: width 0.3s;
+}
+
+section.habits h2 {
+  margin-top: 10px;
+  color: #3c2a3e;
+}
+
+#habit-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.habit-card {
+  background: #fff;
+  border-radius: 10px;
+  border-top: 4px solid var(--habit-color, #9c27b0);
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.habit-card button.mark-done {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  background: #5d3160;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.habit-card button.completed {
+  background: #2e7d32;
+}
+
+.habit-card .stats {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.habit-card .icons {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.habit-card .icons i {
+  cursor: pointer;
+  font-size: 1rem;
+  color: #777;
+}
+
+#add-btn {
+  background: #5d3160;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.color-options {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.color-options .color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.color-options .color.active {
+  border: 2px solid #000;
+}
+
+.purple { background: #a146eb; }
+.blue   { background: #5b9eff; }
+green  { background: #53d89a; }
+.orange { background: #f4a843; }
+pink   { background: #f586d6; }
+violet { background: #7165f5; }
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.modal-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal-actions #cancel {
+  background: #ccc;
+}
+
+.modal-actions #create {
+  background: #5d3160;
+  color: #fff;
+}
